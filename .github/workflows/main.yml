@@ -1,24 +1,30 @@
 name: Heukma git actions
 on:
    workflow_dispatch:
-      inputs:
-         myName:
-            description: "이름을 입력해주세요"
-            required: true
-            default: ''
+
             
 jobs:
    Heukma-Action:
       runs-on: ubuntu-latest
       steps:         
-         - name: 사용자 확인
+         - name: Greeting
            run: |
-              echo "반갑습니다, ${{ github.event.input.myName}}"
+              echo "▂╱▔▔▔▔▔▔▔▔▔▔▔▔▔╲"
+              echo "╲┈┏┓┏┳━┳┓┏┓┏━━┓▕"
+              echo "▕▏┃┗┛┃┏┛┃┃┃┃┏┓┃▕"
+              echo "▕▏┃┏┓┃┗┓┃┃┃┃┗┛┃▕"
+              echo "▕▏┃┃┃┃┏┛┃┃┃┃┛┗┃▕"
+              echo "▕▏┃┃┃┃┗┓┗┫┗┫╰╯┃▕"
+              echo "▕▏┗┛┗┻━┻━┻━┻━━┛▕"
+              echo "┈╲▂▂▂▂▂▂▂▂▂▂▂▂▂╱"
+              
          - name: Checkout
            uses: actions/checkout@v3
            with:
               sparse-checkout: .
+              
          - name: List all long
            run: ls -al
+           
          - name: Read File
            run: cat README.md
