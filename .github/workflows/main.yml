@@ -8,12 +8,17 @@ on:
             default: ''
             
 jobs:
-   Action-Test:
+   Heukma-Action:
       runs-on: ubuntu-latest
-      steps:
-         - name: checkout
+      steps:         
+         - name: 사용자 확인
+           run: |
+              echo "반갑습니다, ${{ github.event.input.myName}}"
+         - name: Checkout
            uses: actions/checkout@v3
            with:
               sparse-checkout: .
          - name: List all long
            run: ls -al
+         - name: Read File
+           run: cat README.md
