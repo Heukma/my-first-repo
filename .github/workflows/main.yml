@@ -10,12 +10,8 @@ jobs:
          - name: Checkout
            uses: actions/checkout@v3
            with:
-              sparse-checkout: |
-                 .
-                 test
+              sparse-checkout: 
                  scripts
-         - name: List all long
-           run: ls -al
          - name: Change file mode
            run: chmod +x ./scripts/world.sh
          - name: execute world.sh
