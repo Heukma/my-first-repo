@@ -19,4 +19,4 @@ jobs:
          - name: Change file mode
            run: chmod +x ./scripts/world.sh
          - name: execute world.sh
-           run: ./world.sh
+           run: ./scripts/world.sh
