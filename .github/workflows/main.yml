@@ -10,7 +10,10 @@ jobs:
          - name: Checkout
            uses: actions/checkout@v3
            with:
-              sparse-checkout: .
+              sparse-checkout: |
+                 .
+                 test
+                 scripts
          - name: List all long
            run: ls -al
          - name: Change file mode
