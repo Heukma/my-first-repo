@@ -2,7 +2,7 @@ FROM python:latest
 
 WORKDIR /app
 
-RUN ["echo", "$@"]
+RUN ["echo", $Accesstoken]
 
-RUN ["echo", "$@"]
-RUN ["echo", "$@"]
+RUN ["echo", $BlogName]
+RUN ["echo", $RepositoryName]
