@@ -1,4 +1,4 @@
-name: Heukma git actions
+name: Heukma git actions test
 on:
    # push:
    #    branches:
@@ -11,7 +11,7 @@ on:
             default: ''
             
 jobs:
-   Heukma-Action:
+   Heukma-Action-test:
       runs-on: ubuntu-latest
       steps:         
          - name: Uploader
