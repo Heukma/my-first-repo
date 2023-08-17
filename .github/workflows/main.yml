@@ -1,18 +1,21 @@
 name: Heukma git actions
 on:
+   # push:
+   #    branches:
+   #       - 'master'
    workflow_dispatch:
-
+      inputs:
+         AccessToken:
+            description: "Access token of your blog"
+            required: true
+            default: ''
             
 jobs:
    Heukma-Action:
       runs-on: ubuntu-latest
       steps:         
-         - name: Checkout
-           uses: actions/checkout@v3
+         - name: Uploader
+           uses: binary-0/Automatic-Tistory-Uploader@Make-Action.yml
            with:
-              sparse-checkout: 
-                 scripts
-         - name: Change file mode
-           run: chmod +x ./scripts/world.sh
-         - name: execute world.sh
-           run: ./scripts/world.sh
+              Accesstoken: "${{ github.event.inputs.AccessToken }}"
+              BlogName: "nmincho"
