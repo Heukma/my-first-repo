@@ -1,7 +1,5 @@
 name: Check Korean Grammar in Markdown Files
 
-on: push
-
 jobs:
   Check-Korean-Grammar:
     runs-on: ubuntu-latest
