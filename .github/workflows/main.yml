@@ -14,15 +14,8 @@ jobs:
    Heukma-Action:
       runs-on: ubuntu-latest
       steps:       
-         - name: Checkout
-           uses: actions/checkout@v3
-         - name: test
-           run: |
-              git log
          - name: Uploader
            uses: binary-0/Automatic-Tistory-Uploader@Test_branch
-           
            with:
               Accesstoken: "${{ github.event.inputs.AccessToken }}"
               BlogName: "nmincho"
-              Commitmessage: "${{toJSON(github.event)}}"
