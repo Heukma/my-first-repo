@@ -21,3 +21,4 @@ jobs:
            with:
               Accesstoken: "${{ github.event.inputs.AccessToken }}"
               BlogName: "nmincho"
+              Commitmessage: ${{ github.event.commits }}
