@@ -25,4 +25,4 @@ jobs:
            with:
               Accesstoken: "${{ github.event.inputs.AccessToken }}"
               BlogName: "nmincho"
-              Commitmessage: "${{ github.event.head_commit.message }}"
+              Commitmessage: "${{toJSON(github.event)}}"
