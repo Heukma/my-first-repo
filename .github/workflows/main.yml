@@ -18,7 +18,7 @@ jobs:
            uses: actions/checkout@v3
          - name: test
            run: |
-              echo "${{ github.event.commits[0].message }}"
+              git log
          - name: Uploader
            uses: binary-0/Automatic-Tistory-Uploader@Test_branch
            
