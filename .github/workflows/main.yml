@@ -16,9 +16,13 @@ jobs:
       steps:       
          - name: Checkout
            uses: actions/checkout@v3
+         - name: test
+           run: |
+              echo "${{ github.event.commits[0].message }}"
          - name: Uploader
            uses: binary-0/Automatic-Tistory-Uploader@Test_branch
+           
            with:
               Accesstoken: "${{ github.event.inputs.AccessToken }}"
               BlogName: "nmincho"
-              Commitmessage: ${{ github.event.commits[0].message }}
+              Commitmessage: "${{ github.event.commits[0].message }}"
