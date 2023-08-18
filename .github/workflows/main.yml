@@ -15,7 +15,7 @@ jobs:
       runs-on: ubuntu-latest
       steps:         
          - name: Uploader
-           uses: binary-0/Automatic-Tistory-Uploader@Test-branch
+           uses: binary-0/Automatic-Tistory-Uploader@Make-Action.yml
            with:
               Accesstoken: "${{ github.event.inputs.AccessToken }}"
               BlogName: "nmincho"
