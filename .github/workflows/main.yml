@@ -17,7 +17,7 @@ jobs:
          - name: Checkout
            uses: actions/checkout@v3
          - name: Uploader
-           uses: binary-0/Automatic-Tistory-Uploader@Make_action.yml
+           uses: binary-0/Automatic-Tistory-Uploader@Test_branch
            with:
               Accesstoken: "${{ github.event.inputs.AccessToken }}"
               BlogName: "nmincho"
