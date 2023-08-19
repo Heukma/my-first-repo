@@ -69,11 +69,13 @@ jobs:
 |`Accesstoken`|Tstory Access token| | O |
 |`BlogName`|Name of the Tstroy Blog|| O |
 |`GithubToken`|Secret GITHUB_TOKEN|| O |
-|~~`visibility`~~|~~Visibility of the Blog Post~~|`3`|X|
-|~~`category`~~|~~Category ID~~|`0`| X|
-|~~`acceptComment`~~|~~Allow comments to be written to post~~|`1`| X |
-> **Note**: visibility, category, and acceptComment inputs are currently only available as default values and will be updated later
+|`visibility`|Visibility of the Blog Post|`3`|X|
+|`category`|Category ID|`0`| X|
+|`acceptComment`|Allow comments to be written to post|`1`| X |
 
+
+> **Note**: visibility, category, and acceptComment inputs are currently only available as default values and will be updated later
+> 
 > Click [here](https://tistory.github.io/document-tistory-apis/apis/v1/post/write.html) to learn more about these inputs
 
 ## Technical Flow
