@@ -2,14 +2,14 @@
 
 **Automatic-Tistory-Uploader** is a github action that automatically posts information about repositories to Tistory blogs.
 
-This action automatically uploads:
+- This action automatically uploads:
   - **Summary of Repository** Utilizing the [NLTK](https://www.nltk.org) Module
   - **README.md** 
   - **Commit History** including commit messages, commit IDs, and corresponding URLs
 
-Automatically uploaded posts offer new visitors with a rapid, comprehensive overview of the repository's contents and history.
+- Automatically uploaded posts offer new visitors with a rapid, comprehensive overview of the repository's contents and history.
 
-It also empowers users to establish GitHub Events for the automatic uploading of posts to Tistory. (ex. Push, Pull requests ...)
+- It also empowers users to establish GitHub Events for the automatic uploading of posts to Tistory. (ex. Push, Pull requests ...)
 
 ## How To Use
 We used Tistory Open API in this project. To find more information of the API, click on the [Link](https://tistory.github.io/document-tistory-apis/).
@@ -40,6 +40,28 @@ In other words for newbies of GitHub Actions: Note that the `GITHUB_TOKEN` is **
 ### Set Up Your Repository
 1. Create a folder named .github and create a workflows folder inside it, if it doesn't exist.
 2. Create a new file named tistory-blog-action.yml with the following contents inside the workflows folder:
+   
+````
+name: Heukma git actions
+on:
+   # push:
+   #    branches:
+   #       - 'master'
+   workflow_dispatch:
+            
+jobs:
+   Heukma-Action:
+      runs-on: ubuntu-latest
+      steps:       
+         - name: Uploader
+           uses: binary-0/Automatic-Tistory-Uploader@main
+           with:
+              Accesstoken: "${{ secrets.BLOG_ACCESS_TOKEN }}"
+              BlogName: "nmincho"
+              GithubToken: "${{ secrets.GITHUB_TOKEN }}"
+
+````
+
 3. Replace the above 'BlogName' with your own blog name. Tokens were processed on GitHub secret variable earlier, so you don't have to modify them.
 4. You can initiate the process by either **git push** and allowing it to execute automatically, or you have the option to manually activate it for an immediate outcome using workflow_dispatch event.
 
@@ -50,13 +72,11 @@ In other words for newbies of GitHub Actions: Note that the `GITHUB_TOKEN` is **
 |`Accesstoken`|Tstory Access token| | O |
 |`BlogName`|Name of the Tstroy Blog|| O |
 |`GithubToken`|Secret GITHUB_TOKEN|| O |
-|`visibility`|Visibility of the Blog Post|`3`|X|
-|`category`|Category ID|`0`| X|
-|`acceptComment`|Allow comments to be written to post|`1`| X |
-
-
+|~~`visibility`~~|~~Visibility of the Blog Post~~|`3`|X|
+|~~`category`~~|~~Category ID~~|`0`| X|
+|~~`acceptComment`~~|~~Allow comments to be written to post~~|`1`| X |
 > **Note**: visibility, category, and acceptComment inputs are currently only available as default values and will be updated later
-> 
+
 > Click [here](https://tistory.github.io/document-tistory-apis/apis/v1/post/write.html) to learn more about these inputs
 
 ## Technical Flow
