@@ -42,6 +42,7 @@ In other words for newbies of GitHub Actions: Note that the `GITHUB_TOKEN` is **
 2. Create a new file named tistory-blog-action.yml with the following contents inside the workflows folder:
    
 ````
+
 name: Heukma git actions
 on:
    # push:
