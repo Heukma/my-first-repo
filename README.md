@@ -40,27 +40,6 @@ In other words for newbies of GitHub Actions: Note that the `GITHUB_TOKEN` is **
 ### Set Up Your Repository
 1. Create a folder named .github and create a workflows folder inside it, if it doesn't exist.
 2. Create a new file named tistory-blog-action.yml with the following contents inside the workflows folder:
-   
-```
-name: Heukma git actions
-on:
-   # push:
-   #    branches:
-   #       - 'master'
-   workflow_dispatch:
-            
-jobs:
-   Heukma-Action:
-      runs-on: ubuntu-latest
-      steps:       
-         - name: Uploader
-           uses: binary-0/Automatic-Tistory-Uploader@main
-           with:
-              Accesstoken: "${{ secrets.BLOG_ACCESS_TOKEN }}"
-              BlogName: "nmincho"
-              GithubToken: "${{ secrets.GITHUB_TOKEN }}"
-```
-
 3. Replace the above 'BlogName' with your own blog name. Tokens were processed on GitHub secret variable earlier, so you don't have to modify them.
 4. You can initiate the process by either **git push** and allowing it to execute automatically, or you have the option to manually activate it for an immediate outcome using workflow_dispatch event.
 
