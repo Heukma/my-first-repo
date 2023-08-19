@@ -9,8 +9,8 @@ jobs:
    Heukma-Action:
       runs-on: ubuntu-latest
       steps:       
-         - name: Uploader
-           uses: binary-0/Automatic-Tistory-Uploader@Test_python_markdown_extension
+         - name: Automatic-Tistory-Uploader
+           uses: binary-0/Automatic-Tistory-Uploader@v1.0.0
            with:
               Accesstoken: "${{ secrets.BLOG_ACCESS_TOKEN }}"
               BlogName: "nmincho"
