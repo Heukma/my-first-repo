@@ -10,7 +10,7 @@ jobs:
       runs-on: ubuntu-latest
       steps:       
          - name: Uploader
-           uses: binary-0/Automatic-Tistory-Uploader@Read-Readme.md
+           uses: binary-0/Automatic-Tistory-Uploader@main
            with:
               Accesstoken: "${{ secrets.BLOG_ACCESS_TOKEN }}"
               BlogName: "nmincho"
