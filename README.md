@@ -12,6 +12,10 @@
 | --- | --- | --- |
 | 1번 | 설명 | 링크 |
 
+```
+printf("ABC");
+```
+
 # 세번째
 ## 유용한 링크
 [클래스 오가니제이션](https://github.com/BryantSon-Class)
