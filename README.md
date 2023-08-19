@@ -2,14 +2,14 @@
 
 **Automatic-Tistory-Uploader** is a github action that automatically posts information about repositories to Tistory blogs.
 
-- This action automatically uploads:
+This action automatically uploads:
   - **Summary of Repository** Utilizing the [NLTK](https://www.nltk.org) Module
   - **README.md** 
   - **Commit History** including commit messages, commit IDs, and corresponding URLs
 
-- Automatically uploaded posts offer new visitors with a rapid, comprehensive overview of the repository's contents and history.
+Automatically uploaded posts offer new visitors with a rapid, comprehensive overview of the repository's contents and history.
 
-- It also empowers users to establish GitHub Events for the automatic uploading of posts to Tistory. (ex. Push, Pull requests ...)
+It also empowers users to establish GitHub Events for the automatic uploading of posts to Tistory. (ex. Push, Pull requests ...)
 
 ## How To Use
 We used Tistory Open API in this project. To find more information of the API, click on the [Link](https://tistory.github.io/document-tistory-apis/).
